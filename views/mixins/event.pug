@@ -1,0 +1,21 @@
+mixin event_row(event)
+  if event.event === "Transfer"
+    tr
+      td
+        a(href="/event/" + event._id) #{event.event}
+      td
+        a(href="/account/" + event.args._from) #{event.args._from}
+      td
+        a(href="/account/" + event.args._to) #{event.args._to}
+      td #{tokenformatter.format(event.args._value)}
+      td #{moment(event.timestamp * 1000).fromNow()}
+  if event.event === "Approval"
+    tr
+      td
+        a(href="/event/" + event._id) #{event.event}
+      td
+        a(href="/account/" + event.args._owner) #{event.args._owner}
+      td
+        a(href="/account/" + event.args._spender) #{event.args._spender}
+      td #{tokenformatter.format(event.args._value)}
+      td #{moment(event.timestamp * 1000).fromNow()}

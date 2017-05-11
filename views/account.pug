@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h3 Account #{balance._id}
+  table.table
+    tr
+      td Balance:
+      td #{tokenformatter.format(balance.balance)}
+  
+  .row
+    .col-md-10      
+      h3 Transactions
+    .col-md-1
+      if offset - stepSize >= 0
+        a.btn.btn-default(href="/account/" + balance._id + "/" + (offset - stepSize)) Previous
+    .col-md-1
+        a.btn.btn-default(href="/account/" + balance._id + "/" + (offset + stepSize)) Next
+  .row
+    .col-md-12
+      table.table
+        tr
+          th Type
+          th From
+          th To
+          th Amount
+          th Date
+        for event in events
+          +event_row(event)

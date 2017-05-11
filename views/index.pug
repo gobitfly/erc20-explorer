@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{config.tokenName}
+  p Welcome to the #{config.tokenShortName} Explorer powered by bitfly!
+  
+  h3 Recent transactions
+  table.table
+    tr
+      th Type
+      th From
+      th To
+      th Amount
+      th Date
+    for event in events
+      +event_row(event)
