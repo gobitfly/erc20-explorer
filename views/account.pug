@@ -17,12 +17,13 @@ block content
         a.btn.btn-default(href="/account/" + balance._id + "/" + (offset + stepSize)) Next
   .row
     .col-md-12
-      table.table
-        tr
-          th Type
-          th From
-          th To
-          th Amount
-          th Date
-        for event in events
-          +event_row(event)
+      .table-responsive
+        table.table
+          tr
+            th Type
+            th From
+            th To
+            th Amount
+            th Date
+          for event in events
+            +event_row(event)

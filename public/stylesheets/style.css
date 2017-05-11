@@ -1,6 +1,15 @@
 body {
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 978px) {
+    .container {
+      padding:5;
+      margin:0;
+    }
 }
 
 a {

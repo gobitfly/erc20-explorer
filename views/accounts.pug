@@ -11,12 +11,13 @@ block content
         a.btn.btn-default(href="/accounts/" + (offset + stepSize)) Next
   .row
     .col-md-12
-      table.table
-        tr
-          th Address
-          th Balance
-        for account in accounts
+      .table-responsive
+        table.table
           tr
-            td
-              a(href="/account/" + account._id) #{account._id}
-            td #{tokenformatter.format(account.balance)}
+            th Address
+            th Balance
+          for account in accounts
+            tr
+              td
+                a(href="/account/" + account._id) #{account._id}
+              td #{tokenformatter.format(account.balance)}
