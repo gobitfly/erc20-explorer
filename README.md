@@ -28,7 +28,7 @@ Supported Ethereum backend nodes: Parity, Geth (untested)
 1. Setup a nodejs & npm environment
 2. Install the latest version of the Parity Ethereum client
 3. Start parity using the following options: `parity --warp`
-4. Clone this repository to your local machine: `git clone https://github.com/gobitfly/erc20-exporter`
+4. Clone this repository to your local machine: `git clone https://github.com/gobitfly/erc20-explorer.git
 5. Install all dependencies: `npm install`
 6. Rename `config.js.example` into `config.js` and adjust the file to your local environment & token
 7. Start the explorer: `npm start`
